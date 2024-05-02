@@ -1,0 +1,55 @@
+.container {
+  border-radius: 10px;
+  width: 444px;
+  height: auto; /* Cambiado a auto para permitir que la altura se ajuste según el contenido */
+  background-color: hsl(217, 19%, 24%);
+  border: 2px solid transparent;
+  position: relative;
+}
+.container-img {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  left: 50%; /* Centra horizontalmente el elemento */
+  transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
+}
+.container-img:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.7); 
+}
+
+.container-line {
+  left: 50%;
+  width: 90%;
+  margin: 20px auto 50px auto;
+}
+
+.line {
+  width: 100%;
+}
+
+.icon {
+  width: 40%; 
+  animation: rotar 2s linear infinite; /* animación de rotación */
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg); /* comienza la rotación desde 0 grados */
+  }
+  to {
+    transform: rotate(360deg); /* termina la rotación en 360 grados */
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%; 
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+}
