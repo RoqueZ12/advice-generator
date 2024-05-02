@@ -18,7 +18,8 @@ function App() {
   };
 
   return (
-    <div className='container'>
+    <div>
+      <div className='container'>
       {error ? (
         <p>Error: {error.message}</p>
       ) : (
@@ -31,6 +32,11 @@ function App() {
         <img className='icon' src={icon}  alt="icon" />
       </div>
     </div>
+    <footer className="footer">
+        Challenge Accepted by RoqueZ12
+      </footer>
+    </div>
+    
   );
 }
 
